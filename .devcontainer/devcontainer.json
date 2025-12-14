@@ -1,0 +1,7 @@
+{
+  "customizations": {
+    "codespaces": {
+      "machine": "standardLinux128gb"
+    }
+  }
+}
