@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const BACKEND_URL = "https://ai-photo-personalisation.onrender.com";
+
 function App() {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
@@ -26,7 +28,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://0.0.0.0:8000/generate",
+        `${BACKEND_URL}/generate`,
         {
           method: "POST",
           body: formData,
@@ -35,9 +37,7 @@ function App() {
 
       const data = await response.json();
 
-      setResult(
-        `http://0.0.0.0:8000/${data.image_path}`
-      );
+      setResult(`${BACKEND_URL}/${data.image_path}`);
     } catch (err) {
       alert("Something went wrong");
     }
