@@ -26,7 +26,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://legendary-giggle-w4957g7xxw4hg6pr-8000.app.github.dev/generate",
+        "https://0.0.0.0:8000/generate",
         {
           method: "POST",
           body: formData,
@@ -36,7 +36,7 @@ function App() {
       const data = await response.json();
 
       setResult(
-        `https://legendary-giggle-w4957g7xxw4hg6pr-8000.app.github.dev/${data.image_path}`
+        `http://0.0.0.0:8000/${data.image_path}`
       );
     } catch (err) {
       alert("Something went wrong");
