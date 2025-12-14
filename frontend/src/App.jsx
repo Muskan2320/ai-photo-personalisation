@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div style={{ padding: "40px", fontFamily: "Arial" }}>
-      <h2>Pickabook AI Personalisation</h2>
+      <h2>AI Personalisation</h2>
 
       <input type="file" accept="image/*" onChange={handleFileChange} />
 
