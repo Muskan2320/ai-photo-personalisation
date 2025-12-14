@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: backend
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: bash backend/start.sh
